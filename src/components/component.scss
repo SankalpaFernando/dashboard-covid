@@ -1,0 +1,265 @@
+.card-holder{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .card{
+        background-color: #00b3ff;
+        padding: 1rem;
+        width: 70%;
+        border-radius: 2rem;
+        margin:1rem auto;
+        padding: 2rem 1rem;
+        text-align: left;
+        &>.icon{
+            font-size: 3.5rem;
+            margin: .5rem auto;
+            color: white;
+        }
+        &>h3{
+            font-size: 2rem;
+            color: white;
+        }
+        &>p{
+            color: white;
+        }
+    }
+}
+.country-card{
+    width: 80%;
+    background-color: #5634d1;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    padding: 2rem;
+    background-position-y: 5rem;
+    background-position-x: -2rem;
+    background-image: url('https://cdn-cms.crowe.com/pa/-/media/Crowe/Shared/Image-Library/Country-Maps/Dots/CH-map-panama_l2r_dots.png?h=370&la=en-US&w=556&modified=00010101000000&hash=34B9C9BF550A7F8B17FC314291F71BDE928D4423');
+    &>p{
+        font-size: 1rem;
+        color: white;
+    }
+    &>h1{
+        font-size: 3rem;
+        color: white;
+    }
+}
+
+.search{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column: 3;
+    &>.search-card{
+        width: 80%;
+        background-color: white;
+        margin: 1rem auto;
+        height:70vh;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        border-radius: 1rem;
+        padding-top: .8rem;
+        &>.countries{
+            overflow-y: scroll;
+            height: 55vh;
+        }
+        &>.search-holder{
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            width: 90%;
+            margin: 2rem auto;
+            margin-bottom: 3rem;
+            &>.search-text{
+                height: 2rem;
+                padding-left: .4rem;
+                border: 0;
+                font-size: 1.2rem;
+                outline: 0;
+            }
+            &>.search:active{
+                border: 0;
+                outline: 0;
+            }
+            &>.icon{
+                font-size: 1.5rem;
+                text-align: right;
+                margin-left: 2.4rem;
+                margin-top: .2rem;
+                color: #ababab;
+            }
+        }
+    }
+}
+
+
+
+.search-country{
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    width:80%;
+    margin: 1.5rem auto;
+    &>.flag{
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        background-size: 200% 100%;
+        background-position-x: -1rem;
+    }
+    &>.country{
+        margin-top: .2rem;
+        margin-left: 1rem;
+        color: #d5d5da;
+        font-size: 1.5rem;
+    }
+    &>.number{
+        margin-top: .2rem;
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-align: right;
+        color: rgb(59, 59, 59);
+    }
+}
+
+.bar-chart{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    canvas{
+        height: 50vh !important;
+    }
+}
+
+.covid{
+    display: flex;
+    width: 70%;
+    margin:1rem auto;
+    padding: 2rem 2rem 0rem 2rem;
+    border-radius: 2rem;
+    background-color: #46e4b2;
+    &>.img{
+        height: 10rem;
+        width:10rem;
+    }
+    &>.description{
+        &>h1{
+            font-size: 1.6rem;
+            color: white;
+        }
+        &>p{
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            color: white;
+        }
+        &>.btn{
+            padding: .7rem 1rem;
+            color: white;
+            background-color: transparent;
+            border:2px solid white;
+            border-radius: .8rem;
+            margin: 1rem 0;
+            transition: 20ms;
+            outline: 0;
+            &:hover{
+                background-color:#FFF ;
+                color: #46e4b2;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ffffff; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+
+  @media(max-width:1400px){
+    .card-holder{
+        grid-template-columns: 1fr;
+    }
+    .country-card{
+        height: 50vh;
+    }
+    .search{
+        &>.search-card{
+            width: 90%;
+            &>.countries{
+                overflow-y: scroll;
+                height: 45vh;
+            }
+            &>.search-holder{
+                display: grid;
+                grid-template-columns: 4fr 1fr;
+                width: 80%;
+                margin: 2rem auto;
+                margin-bottom: 1rem;
+                &>.search-text{
+                    height: 2rem;
+                    padding-left: .4rem;
+                    border: 0;
+                    font-size: 1.2rem;
+                    outline: 0;
+                }
+                &>.search:active{
+                    border: 0;
+                    outline: 0;
+                }
+                &>.icon{
+                    display: none;
+                    font-size: 1.5rem;
+                    text-align: right;
+                    margin-left: 0;
+                    margin-top: .2rem;
+                    color: #ababab;
+                }
+            }
+        }
+    }
+    .search-country{
+        &>.flag{
+            height: 2rem;
+            width: 2rem;
+        }
+        &>.country{
+            margin-top: .2rem;
+            margin-left: 1rem;
+            color: #d5d5da;
+            font-size: 1rem;
+        }
+        &>.number{
+            font-size: 1rem;
+        }
+    }
+    .covid{
+        display: grid;
+        width: 70%;
+        &>.description{
+            &>h1{
+                text-align: center;
+            }
+            &>p{
+                text-align: center;
+            }
+            &>.btn{
+                margin-left: 4rem;
+            }
+        }
+    }
+    
+.bar-chart{
+    canvas{
+        height: 70vh !important;
+    }
+}
+  }

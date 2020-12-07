@@ -13,7 +13,9 @@ function Covid() {
             className="description">
                 <h1>Symptoms of Covid-19</h1>
                 <p>Get a Self Check on Yourself for Covid-19</p>
+                <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html" target="_blank" rel="noopener noreferrer">
                 <button className="btn">Read More</button>
+                </a>
             </div>
         </motion.div>
     )

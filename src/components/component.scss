@@ -144,7 +144,7 @@
             font-size: 1.1rem;
             color: white;
         }
-        &>.btn{
+        &>a>.btn{
             padding: .7rem 1rem;
             color: white;
             background-color: transparent;
@@ -251,7 +251,7 @@
             &>p{
                 text-align: center;
             }
-            &>.btn{
+            &>a>.btn{
                 margin-left: 4rem;
             }
         }
